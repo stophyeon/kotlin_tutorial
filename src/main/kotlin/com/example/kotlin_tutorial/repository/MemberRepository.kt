@@ -9,6 +9,7 @@ import java.util.*
 @Repository
 interface MemberRepository : JpaRepository<Member,Long>{
     public fun save(member: Member)
+    public fun findByIdAndPw(id: String, pw:String):Optional<Member>
     public fun findById(id: String): Optional<Member>
 
 }
